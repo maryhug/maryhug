@@ -6,6 +6,9 @@ on:
     - cron: '0 6 * * *'
   workflow_dispatch: # lets you trigger it manually from GitHub
 
+permissions:
+  contents: write
+
 jobs:
   refresh:
     runs-on: ubuntu-latest
@@ -13,17 +16,23 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Touch SVG to bust GitHub cache
+      - name: Touch SVGs to bust GitHub cache
         run: |
-          # GitHub caches SVGs aggressively.
-          # Adding an invisible comment with today's date forces a fresh render.
           DATE=$(date +%Y-%m-%d)
-          sed -i "s/<!-- cache:[0-9-]* -->/<!-- cache:$DATE -->/" maryhug-profile.svg || \
-          sed -i "s|<svg |<svg <!-- cache:$DATE --> |" maryhug-profile.svg || true
-          echo "Cache tag updated: $DATE"
+          # Add or update a cache-busting comment in both SVGs
+          for FILE in maryhug-profile.svg maryhug-profile-dark.svg; do
+            if [ -f "$FILE" ]; then
+              if grep -q "<!-- cache:" "$FILE"; then
+                sed -i "s/<!-- cache:[0-9-]* -->/<!-- cache:$DATE -->/" "$FILE"
+              else
+                sed -i "s|</svg>|<!-- cache:$DATE -->\n</svg>|" "$FILE"
+              fi
+              echo "Cache tag updated in $FILE: $DATE"
+            fi
+          done
 
       - name: Commit if changed
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: daily stats refresh ${{ github.run_number }}"
-          file_pattern: maryhug-profile.svg
+          file_pattern: "*.svg"

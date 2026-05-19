@@ -1,5 +1,9 @@
 <div align="center">
-  <img src="./maryhug-profile.svg" width="800" alt="Maryhug Duran — GitHub Profile"/>
+  <picture>
+    <source media="(prefers-color-scheme: dark)"
+      srcset="./maryhug-profile-dark.svg"/>
+    <img src="./maryhug-profile.svg" width="800" alt="Maryhug Duran — GitHub Profile"/>
+  </picture>
 </div>
 
 <br/>
