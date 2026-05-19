@@ -213,9 +213,7 @@
 <rect x="24" y="426" width="362" height="192" rx="16" fill="none" stroke="#f9c8de" stroke-width="1.2"/>
 <text x="44" y="454" font-size="10" font-weight="700" fill="#d6336c" letter-spacing="2.5">GITHUB STATS</text>
 <line x1="44" y1="460" x2="234" y2="460" stroke="#f9c8de" stroke-width="1"/>
-<image
-  href="https://github-readme-stats.vercel.app/api?username=maryhug&amp;show_icons=true&amp;count_private=true&amp;hide_border=true&amp;title_color=d6336c&amp;text_color=4a1030&amp;icon_color=d6336c&amp;bg_color=00000000&amp;rank_icon=github&amp;card_width=330"
-  x="30" y="464" width="350" height="148" preserveAspectRatio="xMidYMid meet"/>
+
 
 <!-- Top Languages -->
 <rect x="414" y="426" width="362" height="192" rx="16" fill="white" opacity=".9" filter="url(#cs)"
@@ -275,9 +273,7 @@
 <line x1="44" y1="670" x2="254" y2="670" stroke="#f9c8de" stroke-width="1"/>
 
 <!-- Live streak image — auto-updates, matches the style seen in screenshot -->
-<image
-  href="https://github-readme-streak-stats.herokuapp.com/?user=maryhug&amp;hide_border=true&amp;background=FFFFFF00&amp;ring=d6336c&amp;fire=a8174a&amp;currStreakNum=d6336c&amp;currStreakLabel=9b5070&amp;sideNums=4a1030&amp;sideLabels=9b5070&amp;dates=9b5070&amp;stroke=f9c8de&amp;type=svg"
-  x="32" y="674" width="736" height="116" preserveAspectRatio="xMidYMid meet"/>
+
 
 
 <!-- ══════════════════════════════════════
