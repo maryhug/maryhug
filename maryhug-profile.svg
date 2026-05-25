@@ -1,13 +1,60 @@
-<svg width="800" height="640" viewBox="0 0 800 640" xmlns="http://www.w3.org/2000/svg">
+<svg width="800" height="1054" viewBox="0 0 800 1054" xmlns="http://www.w3.org/2000/svg">
 <defs>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=DM+Sans:wght@400;500;600&amp;display=swap');
     :root{
       --rose:#d6336c;--deep:#a8174a;--blush:#ffb7d5;--muted:#9b5070;--body:#4a1030;
     }
-    @media(prefers-color-scheme:dark){:root{
-      --rose:#f472aa;--deep:#ffb7d5;--blush:#c0397a;--muted:#e0a0c0;--body:#ffeaf4;
-    }}
+    @media(prefers-color-scheme:dark){
+      :root{ --rose:#f472aa;--deep:#ffb7d5;--blush:#c0397a;--muted:#e0a0c0;--body:#ffeaf4; }
+      /* Background */
+      rect[fill="url(#bgG)"]                 { fill: url(#bgGdark); }
+      /* Cards */
+      rect[fill="white"]                     { fill: #231018; }
+      /* Pill backgrounds */
+      rect[fill="#fff0f6"]                   { fill: #2d1222; }
+      rect[fill="#ffe4f0"]                   { fill: #280e1c; }
+      rect[fill="#fce4ee"]                   { fill: #200a16; }
+      /* Language bar tracks */
+      rect[fill="#f0eaf4"]                   { fill: #1c0c16; }
+      /* Decorative ellipses */
+      ellipse[fill="#ffb7d5"]                { fill: #5a1535; opacity:.25; }
+      ellipse[fill="#ffd6e7"]                { fill: #3a0d22; opacity:.35; }
+      /* Text — body */
+      text[fill="#4a1030"]                   { fill: #ffeaf4; }
+      /* Text — muted */
+      text[fill="#9b5070"]                   { fill: #c89ab6; }
+      /* Text — rose accent */
+      text[fill="#d6336c"]                   { fill: #f472aa; }
+      /* White text on colored circles (GitHub/LinkedIn/Email) stays white */
+      /* Lines */
+      line[stroke="#f9c8de"],
+      line[stroke="#e8a0bd"]                 { stroke: #4a1a2e; }
+      /* Card + pill borders */
+      rect[stroke="#f9c8de"]                 { stroke: #4a1a2e; }
+      /* Outer animated border */
+      rect[x="7"][fill="none"]               { stroke: #6b2545; }
+      /* Footer strip */
+      rect[fill="#fff0f6"][opacity=".7"]     { fill: #1c0812; }
+      /* Header banner gradient */
+      rect[fill="url(#hG)"]                  { fill: #2a0e1e; }
+      /* Dot pattern — barely visible on dark bg */
+      rect[fill="url(#dots)"]                { opacity: .04; }
+      /* Bar chart zero-commit placeholder */
+      rect[fill="#fce4ee"]                   { fill: #200a16; }
+      /* Line separator footer */
+      line[opacity=".6"]                     { stroke: #3a1228; }
+      /* Language dot indicators — brighter on dark */
+      circle[fill="#6d5dbb"]                 { fill: #9d8fda; }
+      circle[fill="#b87420"]                 { fill: #d4a050; }
+      circle[fill="#c45c70"]                 { fill: #e09aaa; }
+      circle[fill="#3d9c9c"]                 { fill: #6dc0c0; }
+      /* Language bar fills — slightly brighter */
+      rect[fill="url(#tsG)"]                 { opacity: .9; }
+      rect[fill="url(#jsG)"]                 { opacity: .9; }
+      rect[fill="url(#htmlG)"]               { opacity: .9; }
+      rect[fill="url(#cssG)"]                { opacity: .9; }
+    }
     text{font-family:'DM Sans','Segoe UI',sans-serif;}
     .serif{font-family:'DM Serif Display',Georgia,serif;}
     @keyframes fadein{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
@@ -15,11 +62,16 @@
   </style>
 
   <filter id="cs"><feDropShadow dx="0" dy="4" stdDeviation="10" flood-color="#d6336c" flood-opacity=".09"/></filter>
-  <clipPath id="root"><rect width="800" height="640" rx="24"/></clipPath>
+  <clipPath id="root"><rect width="800" height="1054" rx="24"/></clipPath>
 
   <linearGradient id="bgG" x1="0" y1="0" x2="800" y2="640" gradientUnits="userSpaceOnUse">
     <stop offset="0%" stop-color="#fef2f7"/>
     <stop offset="100%" stop-color="#fce6f2"/>
+  </linearGradient>
+  <linearGradient id="bgGdark" x1="0" y1="0" x2="800" y2="640" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-color="#1e0b16"/>
+    <stop offset="60%" stop-color="#150810"/>
+    <stop offset="100%" stop-color="#0e050c"/>
   </linearGradient>
   <linearGradient id="hG" x1="0" y1="0" x2="800" y2="0" gradientUnits="userSpaceOnUse">
     <stop offset="0%" stop-color="#ffe4f0"/>
@@ -43,16 +95,31 @@
   <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
     <circle cx="2" cy="2" r=".8" fill="#d6336c" opacity=".10"/>
   </pattern>
+  <linearGradient id="barG" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#d6336c"/><stop offset="100%" stop-color="#f9a8cc" stop-opacity="0.7"/>
+  </linearGradient>
+  <linearGradient id="tsG" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#6d5dbb"/><stop offset="100%" stop-color="#9d8fda"/>
+  </linearGradient>
+  <linearGradient id="jsG" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#b87420"/><stop offset="100%" stop-color="#d4a050"/>
+  </linearGradient>
+  <linearGradient id="htmlG" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#c45c70"/><stop offset="100%" stop-color="#db8a98"/>
+  </linearGradient>
+  <linearGradient id="cssG" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#3d9c9c"/><stop offset="100%" stop-color="#6dc0c0"/>
+  </linearGradient>
 </defs>
 
 <g clip-path="url(#root)">
 
 <!-- BG -->
-<rect width="800" height="640" fill="url(#bgG)"/>
+<rect width="800" height="1054" fill="url(#bgG)"/>
 <rect width="800" height="640" fill="url(#dots)"/>
 <ellipse cx="0" cy="0" rx="160" ry="110" fill="#ffb7d5" opacity=".08"/>
 <ellipse cx="800" cy="640" rx="190" ry="140" fill="#ffd6e7" opacity=".09"/>
-<rect x="7" y="7" width="786" height="626" rx="20" fill="none" stroke="#f9c8de" stroke-width="1.4">
+<rect x="7" y="7" width="786" height="1040" rx="20" fill="none" stroke="#f9c8de" stroke-width="1.4">
   <animate attributeName="stroke-opacity" values=".55;.95;.55" dur="3.5s" repeatCount="indefinite"/>
 </rect>
 
@@ -66,7 +133,7 @@
 <!-- Name -->
 <text x="192" y="50" class="serif" font-size="32" fill="#a8174a" style="animation:fadein .5s ease both .1s">Maryhug Duran</text>
 <text x="194" y="74" font-size="13.5" font-weight="600" fill="#d6336c" letter-spacing=".4" style="animation:fadein .5s ease both .18s">Full-Stack Developer Apprentice</text>
-<text x="194" y="98" font-size="12" fill="#9b5070" style="animation:fadein .5s ease both .26s">Medellin, Colombia  ·  She/Her</text>
+<text x="194" y="98" font-size="12" fill="#9b5070" style="animation:fadein .5s ease both .26s">Medellín, Colombia  ·  She/Her</text>
 <text x="194" y="120" font-size="11" fill="#b06080" font-style="italic" style="animation:fadein .5s ease both .32s">Building interfaces that look good and work even better</text>
 
 <!-- header sparkles -->
@@ -82,13 +149,13 @@
 
 
 <!-- ROW 1: About Me | Tech Stack -->
-<rect x="24" y="172" width="362" height="228" rx="16" fill="white" opacity=".9" filter="url(#cs)" style="animation:fadein .6s ease both .35s"/>
-<rect x="24" y="172" width="362" height="228" rx="16" fill="none" stroke="#f9c8de" stroke-width="1.2"/>
+<rect x="24" y="172" width="362" height="242" rx="16" fill="white" opacity=".9" filter="url(#cs)" style="animation:fadein .6s ease both .35s"/>
+<rect x="24" y="172" width="362" height="242" rx="16" fill="none" stroke="#f9c8de" stroke-width="1.2"/>
 <text x="44" y="200" font-size="10" font-weight="700" fill="#d6336c" letter-spacing="2.5">ABOUT ME</text>
 <line x1="44" y1="207" x2="230" y2="207" stroke="#f9c8de" stroke-width="1"/>
 <g style="animation:fadein .6s ease both .5s">
   <text x="44" y="232" font-size="11" font-weight="600" fill="#4a1030">Location</text>
-  <text x="44" y="250" font-size="11" fill="#9b5070">Medellin, Colombia</text>
+  <text x="44" y="250" font-size="11" fill="#9b5070">Medellín, Colombia</text>
   <text x="44" y="274" font-size="11" font-weight="600" fill="#4a1030">Focus</text>
   <text x="44" y="292" font-size="11" fill="#9b5070">Full-Stack Web Development</text>
   <text x="44" y="316" font-size="11" font-weight="600" fill="#4a1030">Currently learning</text>
@@ -97,8 +164,8 @@
   <text x="44" y="376" font-size="11" fill="#9b5070">Agile / SCRUM · Clean Code</text>
 </g>
 
-<rect x="414" y="172" width="362" height="228" rx="16" fill="white" opacity=".9" filter="url(#cs)" style="animation:fadein .6s ease both .4s"/>
-<rect x="414" y="172" width="362" height="228" rx="16" fill="none" stroke="#f9c8de" stroke-width="1.2"/>
+<rect x="414" y="172" width="362" height="182" rx="16" fill="white" opacity=".9" filter="url(#cs)" style="animation:fadein .6s ease both .4s"/>
+<rect x="414" y="172" width="362" height="182" rx="16" fill="none" stroke="#f9c8de" stroke-width="1.2"/>
 <text x="434" y="200" font-size="10" font-weight="700" fill="#d6336c" letter-spacing="2.5">TECH STACK</text>
 <line x1="434" y1="207" x2="628" y2="207" stroke="#f9c8de" stroke-width="1"/>
 <g style="animation:fadein .6s ease both .55s">
@@ -136,50 +203,165 @@
   <rect x="478" y="311" width="50" height="24" rx="12" fill="#fff0f6" stroke="#f9c8de" stroke-width="1"/>
   <text x="503" y="327" font-size="11" font-weight="600" fill="#d6336c" text-anchor="middle">SQL</text>
 
-  <text x="430" y="354" font-size="10.5" font-weight="600" fill="#4a1030">Tools</text>
-  <text x="430" y="370" font-size="10.5" fill="#9b5070">Git · GitHub · VSCode · Vercel · Docker · Postman</text>
-
-  <rect x="430" y="378" width="80" height="18" rx="9" fill="#ffe4f0"/>
-  <text x="470" y="391" font-size="9" font-weight="600" fill="#d6336c" text-anchor="middle">Agile / SCRUM</text>
-  <rect x="516" y="378" width="68" height="18" rx="9" fill="#ffe4f0"/>
-  <text x="550" y="391" font-size="9" font-weight="600" fill="#d6336c" text-anchor="middle">Clean Code</text>
-  <rect x="590" y="378" width="72" height="18" rx="9" fill="#ffe4f0"/>
-  <text x="626" y="391" font-size="9" font-weight="600" fill="#d6336c" text-anchor="middle">REST APIs</text>
 </g>
 
 
-<!-- ROW 2: Let's Connect -->
-<rect x="24" y="416" width="752" height="100" rx="16" fill="white" opacity=".9" filter="url(#cs)" style="animation:fadein .6s ease both .58s"/>
-<rect x="24" y="416" width="752" height="100" rx="16" fill="none" stroke="#f9c8de" stroke-width="1.2"/>
-<text x="44" y="444" font-size="10" font-weight="700" fill="#d6336c" letter-spacing="2.5">LET'S CONNECT</text>
-<line x1="44" y1="450" x2="238" y2="450" stroke="#f9c8de" stroke-width="1"/>
-<g style="animation:fadein .6s ease both .72s">
-  <rect x="38" y="458" width="220" height="36" rx="11" fill="#fff0f6" stroke="#f9c8de" stroke-width="1"/>
-  <circle cx="60" cy="476" r="12" fill="#d6336c"/>
-  <text x="60" y="481" font-size="10.5" fill="white" text-anchor="middle" font-weight="700">GH</text>
-  <text x="82" y="472" font-size="12" font-weight="600" fill="#4a1030">GitHub</text>
-  <text x="82" y="486" font-size="10.5" fill="#9b5070">github.com/maryhug</text>
+<!-- Tools card (right column, below Tech Stack) -->
+<rect x="414" y="370" width="362" height="104" rx="16" fill="white" opacity=".9" filter="url(#cs)" style="animation:fadein .6s ease both .45s"/>
+<rect x="414" y="370" width="362" height="104" rx="16" fill="none" stroke="#f9c8de" stroke-width="1.2"/>
+<text x="434" y="388" font-size="10" font-weight="700" fill="#d6336c" letter-spacing="2.5">TOOLS</text>
+<line x1="434" y1="394" x2="620" y2="394" stroke="#f9c8de" stroke-width="1"/>
+<rect x="434" y="401" width="42" height="24" rx="12" fill="#fff0f6" stroke="#f9c8de" stroke-width="1"/>
+<text x="455" y="417" font-size="11" font-weight="600" fill="#d6336c" text-anchor="middle">Git</text>
+<rect x="480" y="401" width="54" height="24" rx="12" fill="#fff0f6" stroke="#f9c8de" stroke-width="1"/>
+<text x="507" y="417" font-size="11" font-weight="600" fill="#d6336c" text-anchor="middle">GitHub</text>
+<rect x="538" y="401" width="54" height="24" rx="12" fill="#fff0f6" stroke="#f9c8de" stroke-width="1"/>
+<text x="565" y="417" font-size="11" font-weight="600" fill="#d6336c" text-anchor="middle">VSCode</text>
+<rect x="596" y="401" width="50" height="24" rx="12" fill="#fff0f6" stroke="#f9c8de" stroke-width="1"/>
+<text x="621" y="417" font-size="11" font-weight="600" fill="#d6336c" text-anchor="middle">Vercel</text>
+<rect x="650" y="401" width="50" height="24" rx="12" fill="#fff0f6" stroke="#f9c8de" stroke-width="1"/>
+<text x="675" y="417" font-size="11" font-weight="600" fill="#d6336c" text-anchor="middle">Docker</text>
+<rect x="704" y="401" width="58" height="24" rx="12" fill="#fff0f6" stroke="#f9c8de" stroke-width="1"/>
+<text x="733" y="417" font-size="11" font-weight="600" fill="#d6336c" text-anchor="middle">Postman</text>
+<rect x="434" y="433" width="86" height="24" rx="12" fill="#fff0f6" stroke="#f9c8de" stroke-width="1"/>
+<text x="477" y="449" font-size="11" font-weight="600" fill="#d6336c" text-anchor="middle">Agile / SCRUM</text>
+<rect x="524" y="433" width="76" height="24" rx="12" fill="#fff0f6" stroke="#f9c8de" stroke-width="1"/>
+<text x="562" y="449" font-size="11" font-weight="600" fill="#d6336c" text-anchor="middle">Clean Code</text>
+<rect x="604" y="433" width="72" height="24" rx="12" fill="#fff0f6" stroke="#f9c8de" stroke-width="1"/>
+<text x="640" y="449" font-size="11" font-weight="600" fill="#d6336c" text-anchor="middle">REST APIs</text>
 
-  <rect x="274" y="458" width="220" height="36" rx="11" fill="#fff0f6" stroke="#f9c8de" stroke-width="1"/>
-  <circle cx="296" cy="476" r="12" fill="#0A66C2"/>
-  <text x="296" y="481" font-size="9.5" fill="white" text-anchor="middle" font-weight="700">in</text>
-  <text x="318" y="472" font-size="12" font-weight="600" fill="#4a1030">LinkedIn</text>
-  <text x="318" y="486" font-size="10.5" fill="#9b5070">maryhug-viviana-duran-pedraza</text>
+<g transform="translate(0,94)">
+<!-- ROW 2: Actividad Semanal -->
+<rect x="24" y="396" width="752" height="320" rx="16" fill="white" opacity=".9" filter="url(#cs)" style="animation:fadein .6s ease both .58s"/>
+<rect x="24" y="396" width="752" height="320" rx="16" fill="none" stroke="#f9c8de" stroke-width="1.2"/>
+<text x="44" y="414" font-size="10" font-weight="700" fill="#d6336c" letter-spacing="2.5" style="animation:fadein .6s ease both .6s">ACTIVIDAD SEMANAL</text>
+<line x1="44" y1="420" x2="244" y2="420" stroke="#f9c8de" stroke-width="1"/>
+<text x="44" y="436" font-size="11" fill="#9b5070" style="animation:fadein .6s ease both .62s">commits últimos 7 días</text>
 
-  <rect x="510" y="458" width="220" height="36" rx="11" fill="#fff0f6" stroke="#f9c8de" stroke-width="1"/>
-  <circle cx="532" cy="476" r="12" fill="#EA4335"/>
-  <text x="532" y="481" font-size="9.5" fill="white" text-anchor="middle" font-weight="700">@</text>
-  <text x="554" y="472" font-size="12" font-weight="600" fill="#4a1030">Email</text>
-  <text x="554" y="486" font-size="10.5" fill="#9b5070">maryhug.it@gmail.com</text>
+<!-- Bar chart: max-height=62 from y=446, baseline y=508 -->
+<!-- 0-commit placeholder bars (6px, light pink, touching baseline from above) -->
+<rect x="95"  y="502" width="40" height="6" rx="3" fill="#fce4ee" style="animation:fadein .4s ease both .65s"/>
+<rect x="186" y="502" width="40" height="6" rx="3" fill="#fce4ee" style="animation:fadein .4s ease both .67s"/>
+<rect x="277" y="502" width="40" height="6" rx="3" fill="#fce4ee" style="animation:fadein .4s ease both .69s"/>
+<rect x="550" y="502" width="40" height="6" rx="3" fill="#fce4ee" style="animation:fadein .4s ease both .75s"/>
+<rect x="641" y="502" width="40" height="6" rx="3" fill="#fce4ee" style="animation:fadein .4s ease both .77s"/>
+<!-- J (tallest — 8 commits) -->
+<rect x="368" y="446" width="40" height="62" rx="5" fill="url(#barG)" style="animation:fadein .5s ease both .71s"/>
+<text x="388" y="440" font-size="9" font-weight="600" fill="#d6336c" text-anchor="middle">8</text>
+<!-- V (small — 1 commit) -->
+<rect x="459" y="492" width="40" height="16" rx="4" fill="url(#barG)" style="animation:fadein .5s ease both .73s"/>
+<!-- Bar chart base line -->
+<line x1="44" y1="508" x2="732" y2="508" stroke="#f9c8de" stroke-width="1.5"/>
+<!-- Day labels -->
+<text x="115" y="522" font-size="10" fill="#9b5070" text-anchor="middle">L</text>
+<text x="206" y="522" font-size="10" fill="#9b5070" text-anchor="middle">M</text>
+<text x="297" y="522" font-size="10" fill="#9b5070" text-anchor="middle">X</text>
+<text x="388" y="522" font-size="10" fill="#9b5070" text-anchor="middle">J</text>
+<text x="479" y="522" font-size="10" fill="#9b5070" text-anchor="middle">V</text>
+<text x="570" y="522" font-size="10" fill="#9b5070" text-anchor="middle">S</text>
+<text x="661" y="522" font-size="10" fill="#9b5070" text-anchor="middle">D</text>
+
+<line x1="44" y1="536" x2="732" y2="536" stroke="#f9c8de" stroke-width="1"/>
+
+<!-- Stats 2×2 — SVG icons -->
+<g style="animation:fadein .6s ease both .75s">
+
+  <!-- Row 1: Racha | Longest streak -->
+  <g transform="translate(44,544)">
+    <path d="M7,0 C5,3.5 3.5,6 4,9 C2.5,8 2.5,6 2.5,6 C1,8 0.5,10 2,11.5 C3,12.5 5,13.5 7,13.5 C9,13.5 11,12.5 12,11.5 C13.5,10 13,8 11.5,6 C11.5,8 11,8.5 10.5,8.5 C11.5,6 11,3.5 7,0Z" fill="#d6336c"/>
+  </g>
+  <text x="62"  y="556" font-size="11" fill="#4a1030">Racha actual:</text>
+  <text x="154" y="556" font-size="11" fill="#d6336c" font-weight="700">0 días</text>
+
+  <g transform="translate(404,544)">
+    <polygon points="7,0 8.8,5 14,5 9.6,8.5 11.2,14 7,10.8 2.8,14 4.4,8.5 0,5 5.2,5" fill="#d6336c"/>
+  </g>
+  <text x="422" y="556" font-size="11" fill="#4a1030">Longest streak:</text>
+  <text x="522" y="556" font-size="11" fill="#d6336c" font-weight="700">4 días</text>
+
+  <!-- Row 2: Contribuciones | Repositorios -->
+  <g transform="translate(44,568)">
+    <rect x="0"  y="7"   width="3.5" height="7"    rx="0.7" fill="#d6336c"/>
+    <rect x="5"  y="3.5" width="3.5" height="10.5" rx="0.7" fill="#d6336c"/>
+    <rect x="10" y="0"   width="3.5" height="14"   rx="0.7" fill="#d6336c"/>
+  </g>
+  <text x="62"  y="580" font-size="11" fill="#4a1030">Total contribuciones:</text>
+  <text x="200" y="580" font-size="11" fill="#d6336c" font-weight="700">98</text>
+
+  <g transform="translate(404,568)">
+    <path d="M7,0.5 L13,4 L13,10.5 L7,14 L1,10.5 L1,4 Z M7,0.5 L7,7.5 M1,4 L7,7.5 L13,4"
+      stroke="#d6336c" stroke-width="1.4" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+  </g>
+  <text x="422" y="580" font-size="11" fill="#4a1030">Repositorios públicos:</text>
+  <text x="572" y="580" font-size="11" fill="#d6336c" font-weight="700">18</text>
+
 </g>
 
+<line x1="44" y1="596" x2="732" y2="596" stroke="#f9c8de" stroke-width="1"/>
+
+<!-- Top Languages -->
+<text x="44" y="612" font-size="10" font-weight="700" fill="#9b5070" letter-spacing="1.5">TOP LANGUAGES</text>
+<g style="animation:fadein .6s ease both .82s">
+
+  <circle cx="53" cy="624" r="5" fill="#6d5dbb"/>
+  <text x="63" y="629" font-size="11" fill="#4a1030">TypeScript</text>
+  <rect x="150" y="618" width="410" height="12" rx="6" fill="#f0eaf4"/>
+  <rect x="150" y="618" width="221" height="12" rx="6" fill="url(#tsG)"/>
+  <text x="572" y="629" font-size="10.5" fill="#9b5070">54%</text>
+
+  <circle cx="53" cy="642" r="5" fill="#b87420"/>
+  <text x="63" y="647" font-size="11" fill="#4a1030">JavaScript</text>
+  <rect x="150" y="636" width="410" height="12" rx="6" fill="#f0eaf4"/>
+  <rect x="150" y="636" width="94"  height="12" rx="6" fill="url(#jsG)"/>
+  <text x="572" y="647" font-size="10.5" fill="#9b5070">23%</text>
+
+  <circle cx="53" cy="660" r="5" fill="#c45c70"/>
+  <text x="63" y="665" font-size="11" fill="#4a1030">HTML</text>
+  <rect x="150" y="654" width="410" height="12" rx="6" fill="#f0eaf4"/>
+  <rect x="150" y="654" width="33"  height="12" rx="6" fill="url(#htmlG)"/>
+  <text x="572" y="665" font-size="10.5" fill="#9b5070">8%</text>
+
+  <circle cx="53" cy="678" r="5" fill="#3d9c9c"/>
+  <text x="63" y="683" font-size="11" fill="#4a1030">CSS</text>
+  <rect x="150" y="672" width="410" height="12" rx="6" fill="#f0eaf4"/>
+  <rect x="150" y="672" width="33"  height="12" rx="6" fill="url(#cssG)"/>
+  <text x="572" y="683" font-size="10.5" fill="#9b5070">8%</text>
+
+</g>
+
+
+<!-- ROW 3: Let's Connect -->
+<rect x="24" y="732" width="752" height="100" rx="16" fill="white" opacity=".9" filter="url(#cs)" style="animation:fadein .6s ease both .88s"/>
+<rect x="24" y="732" width="752" height="100" rx="16" fill="none" stroke="#f9c8de" stroke-width="1.2"/>
+<text x="44" y="760" font-size="10" font-weight="700" fill="#d6336c" letter-spacing="2.5">LET'S CONNECT</text>
+<line x1="44" y1="766" x2="238" y2="766" stroke="#f9c8de" stroke-width="1"/>
+<g style="animation:fadein .6s ease both .92s">
+  <rect x="38" y="774" width="220" height="36" rx="11" fill="#fff0f6" stroke="#f9c8de" stroke-width="1"/>
+  <circle cx="60" cy="792" r="12" fill="#d6336c"/>
+  <text x="60" y="797" font-size="10.5" fill="white" text-anchor="middle" font-weight="700">GH</text>
+  <text x="82" y="788" font-size="12" font-weight="600" fill="#4a1030">GitHub</text>
+  <text x="82" y="802" font-size="10.5" fill="#9b5070">github.com/maryhug</text>
+
+  <rect x="274" y="774" width="220" height="36" rx="11" fill="#fff0f6" stroke="#f9c8de" stroke-width="1"/>
+  <circle cx="296" cy="792" r="12" fill="#0A66C2"/>
+  <text x="296" y="797" font-size="9.5" fill="white" text-anchor="middle" font-weight="700">in</text>
+  <text x="318" y="788" font-size="12" font-weight="600" fill="#4a1030">LinkedIn</text>
+  <text x="318" y="802" font-size="10.5" fill="#9b5070">maryhug-viviana-duran-pedraza</text>
+
+  <rect x="510" y="774" width="220" height="36" rx="11" fill="#fff0f6" stroke="#f9c8de" stroke-width="1"/>
+  <circle cx="532" cy="792" r="12" fill="#EA4335"/>
+  <text x="532" y="797" font-size="9.5" fill="white" text-anchor="middle" font-weight="700">@</text>
+  <text x="554" y="788" font-size="12" font-weight="600" fill="#4a1030">Email</text>
+  <text x="554" y="802" font-size="10.5" fill="#9b5070">maryhug.it@gmail.com</text>
+</g>
 
 <!-- FOOTER -->
-<rect x="0" y="528" width="800" height="112" fill="#fff0f6" opacity=".7"/>
-<line x1="0" y1="528" x2="800" y2="528" stroke="#f9c8de" stroke-width="1" opacity=".6"/>
-<text x="400" y="558" font-size="10" fill="#d6336c" text-anchor="middle" font-weight="600" style="animation:fadein .7s ease both 1.1s">Opossum enthusiast · Building from Colombia · She/Her</text>
-<text x="400" y="580" font-size="11" fill="#d6336c" text-anchor="middle" font-weight="600" style="animation:fadein .7s ease both 1.2s">Thanks for visiting — feel free to explore the repos</text>
-<text x="400" y="600" font-size="10" fill="#9b5070" text-anchor="middle" style="animation:fadein .7s ease both 1.3s">github.com/maryhug</text>
+<rect x="0" y="838" width="800" height="122" fill="#fff0f6" opacity=".7"/>
+<line x1="0" y1="838" x2="800" y2="838" stroke="#f9c8de" stroke-width="1" opacity=".6"/>
+<text x="400" y="868" font-size="10" fill="#d6336c" text-anchor="middle" font-weight="600" style="animation:fadein .7s ease both 1.1s">Opossum enthusiast · Building from Colombia · She/Her</text>
+<text x="400" y="890" font-size="11" fill="#d6336c" text-anchor="middle" font-weight="600" style="animation:fadein .7s ease both 1.2s">Thanks for visiting — feel free to explore the repos</text>
+<text x="400" y="910" font-size="10" fill="#9b5070" text-anchor="middle" style="animation:fadein .7s ease both 1.3s">github.com/maryhug</text>
 
+</g>
 </g>
 </svg>

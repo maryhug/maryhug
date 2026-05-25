@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "svg-preview",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["http-server", ".", "-p", "3000", "--cors"],
+      "port": 3000
+    }
+  ]
+}
