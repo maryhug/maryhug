@@ -114,6 +114,12 @@
   <clipPath id="distShape">
     <rect x="434" y="547" width="300" height="13" rx="6"/>
   </clipPath>
+  <!-- Shooting star gradient -->
+  <linearGradient id="shootG" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#E8E0FF" stop-opacity="0"/>
+    <stop offset="60%" stop-color="#C4B8F0" stop-opacity="0.9"/>
+    <stop offset="100%" stop-color="white" stop-opacity="0.6"/>
+  </linearGradient>
 </defs>
 
 <g clip-path="url(#root)">
@@ -126,6 +132,67 @@
 <rect x="7" y="7" width="786" height="930" rx="20" fill="none" stroke="#C8C0EC" stroke-width="1.4">
   <animate attributeName="stroke-opacity" values=".55;.95;.55" dur="3.5s" repeatCount="indefinite"/>
 </rect>
+
+<!-- ✦ STARS & SPARKLES ✦ -->
+<!-- Twinkling dots scattered across background -->
+<circle cx="52"  cy="44"  r="2"   fill="#C4B8F0" opacity="0"><animate attributeName="opacity" values="0;0.85;0;0.4;0" dur="3.2s" begin="0s"   repeatCount="indefinite"/></circle>
+<circle cx="740" cy="58"  r="1.5" fill="#A090DC" opacity="0"><animate attributeName="opacity" values="0;0.7;0;0.3;0"  dur="2.8s" begin="0.7s"  repeatCount="indefinite"/></circle>
+<circle cx="688" cy="32"  r="1"   fill="#D8D0F4" opacity="0"><animate attributeName="opacity" values="0;1;0"           dur="2.1s" begin="1.2s"  repeatCount="indefinite"/></circle>
+<circle cx="118" cy="92"  r="1.5" fill="#C4B8F0" opacity="0"><animate attributeName="opacity" values="0;0.8;0;0.2;0"  dur="3.7s" begin="0.4s"  repeatCount="indefinite"/></circle>
+<circle cx="763" cy="280" r="2"   fill="#B8A8F0" opacity="0"><animate attributeName="opacity" values="0;0.6;0"         dur="4.2s" begin="1.9s"  repeatCount="indefinite"/></circle>
+<circle cx="28"  cy="320" r="1"   fill="#C4B8F0" opacity="0"><animate attributeName="opacity" values="0;0.9;0;0.1;0"  dur="2.9s" begin="0.9s"  repeatCount="indefinite"/></circle>
+<circle cx="778" cy="500" r="1.5" fill="#A090DC" opacity="0"><animate attributeName="opacity" values="0;0.7;0"         dur="3.4s" begin="2.3s"  repeatCount="indefinite"/></circle>
+<circle cx="22"  cy="620" r="1"   fill="#D8D0F4" opacity="0"><animate attributeName="opacity" values="0;0.8;0;0.4;0"  dur="2.6s" begin="0.6s"  repeatCount="indefinite"/></circle>
+<circle cx="772" cy="680" r="2"   fill="#C4B8F0" opacity="0"><animate attributeName="opacity" values="0;0.5;0"         dur="3.9s" begin="1.5s"  repeatCount="indefinite"/></circle>
+<circle cx="42"  cy="810" r="1.5" fill="#B8A8F0" opacity="0"><animate attributeName="opacity" values="0;0.9;0;0.3;0"  dur="2.7s" begin="2.8s"  repeatCount="indefinite"/></circle>
+<circle cx="382" cy="172" r="1"   fill="#C4B8F0" opacity="0"><animate attributeName="opacity" values="0;0.6;0"         dur="3.1s" begin="0.2s"  repeatCount="indefinite"/></circle>
+<circle cx="758" cy="872" r="1"   fill="#A090DC" opacity="0"><animate attributeName="opacity" values="0;0.8;0;0.2;0"  dur="4.4s" begin="3.2s"  repeatCount="indefinite"/></circle>
+<circle cx="98"  cy="930" r="1.5" fill="#D8D0F4" opacity="0"><animate attributeName="opacity" values="0;0.7;0"         dur="2.5s" begin="1.8s"  repeatCount="indefinite"/></circle>
+<circle cx="415" cy="388" r="1"   fill="#C4B8F0" opacity="0"><animate attributeName="opacity" values="0;0.5;0;0.8;0"  dur="3.8s" begin="2.5s"  repeatCount="indefinite"/></circle>
+<circle cx="205" cy="938" r="1"   fill="#B8A8F0" opacity="0"><animate attributeName="opacity" values="0;0.9;0"         dur="2.2s" begin="0.5s"  repeatCount="indefinite"/></circle>
+<circle cx="600" cy="920" r="1.5" fill="#C4B8F0" opacity="0"><animate attributeName="opacity" values="0;0.6;0;0.4;0"  dur="3.3s" begin="1.3s"  repeatCount="indefinite"/></circle>
+<circle cx="310" cy="170" r="1"   fill="#A090DC" opacity="0"><animate attributeName="opacity" values="0;0.7;0"         dur="2.4s" begin="2.1s"  repeatCount="indefinite"/></circle>
+<circle cx="770" cy="140" r="1.5" fill="#D8D0F4" opacity="0"><animate attributeName="opacity" values="0;0.85;0;0.3;0" dur="3.6s" begin="0.3s"  repeatCount="indefinite"/></circle>
+
+<!-- ✦ 4-pointed sparkle stars -->
+<g transform="translate(75,68)"><g opacity="0">
+  <text font-size="12" fill="#C4B8F0" text-anchor="middle" dominant-baseline="middle" style="font-family:serif">✦</text>
+  <animate attributeName="opacity" values="0;1;0" dur="3.5s" begin="1s" repeatCount="indefinite"/>
+  <animateTransform attributeName="transform" type="scale" values="0.6;1.3;0.6" dur="3.5s" begin="1s" repeatCount="indefinite"/>
+</g></g>
+
+<g transform="translate(724,95)"><g opacity="0">
+  <text font-size="14" fill="#B8A8F0" text-anchor="middle" dominant-baseline="middle" style="font-family:serif">✦</text>
+  <animate attributeName="opacity" values="0;0.9;0" dur="4s" begin="2.2s" repeatCount="indefinite"/>
+  <animateTransform attributeName="transform" type="scale" values="0.5;1.4;0.5" dur="4s" begin="2.2s" repeatCount="indefinite"/>
+</g></g>
+
+<g transform="translate(38,488)"><g opacity="0">
+  <text font-size="10" fill="#A090DC" text-anchor="middle" dominant-baseline="middle" style="font-family:serif">✦</text>
+  <animate attributeName="opacity" values="0;0.8;0" dur="3s" begin="0.5s" repeatCount="indefinite"/>
+  <animateTransform attributeName="transform" type="scale" values="0.7;1.2;0.7" dur="3s" begin="0.5s" repeatCount="indefinite"/>
+</g></g>
+
+<g transform="translate(762,758)"><g opacity="0">
+  <text font-size="11" fill="#C4B8F0" text-anchor="middle" dominant-baseline="middle" style="font-family:serif">✦</text>
+  <animate attributeName="opacity" values="0;0.9;0" dur="3.8s" begin="1.7s" repeatCount="indefinite"/>
+  <animateTransform attributeName="transform" type="scale" values="0.6;1.3;0.6" dur="3.8s" begin="1.7s" repeatCount="indefinite"/>
+</g></g>
+
+<g transform="translate(400,942)"><g opacity="0">
+  <text font-size="9" fill="#B8A8F0" text-anchor="middle" dominant-baseline="middle" style="font-family:serif">✦</text>
+  <animate attributeName="opacity" values="0;0.7;0" dur="2.8s" begin="3s" repeatCount="indefinite"/>
+  <animateTransform attributeName="transform" type="scale" values="0.8;1.3;0.8" dur="2.8s" begin="3s" repeatCount="indefinite"/>
+</g></g>
+
+<!-- ✧ Shooting star — slides across every 9 seconds -->
+<g opacity="0">
+  <line x1="0" y1="0" x2="110" y2="22" stroke="url(#shootG)" stroke-width="1.5" stroke-linecap="round"/>
+  <animate attributeName="opacity" values="0;0;0.9;0.5;0;0;0;0;0" dur="9s" repeatCount="indefinite"/>
+  <animateTransform attributeName="transform" type="translate"
+    values="80,60; 80,60; 120,72; 260,106; 400,140; 400,140; 400,140; 400,140; 400,140"
+    dur="9s" repeatCount="indefinite"/>
+</g>
 
 <!-- HEADER -->
 <rect x="0" y="0" width="800" height="155" fill="url(#hG)"/>
