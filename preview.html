@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>maryhug – Profile Card Preview</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 32px 16px;
+      font-family: system-ui, sans-serif;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    body.light { background: #f5e9f0; color: #4a1030; }
+    body.dark  { background: #150b10; color: #ffeaf4; }
+
+    h1 { font-size: 1rem; margin-bottom: 20px; opacity: 0.6; letter-spacing: 0.05em; }
+
+    .controls {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    button {
+      padding: 8px 18px;
+      border-radius: 20px;
+      border: 1.5px solid currentColor;
+      background: transparent;
+      color: inherit;
+      cursor: pointer;
+      font-size: 0.85rem;
+      transition: background 0.2s, color 0.2s;
+    }
+    button:hover { background: rgba(214,51,108,0.12); }
+    button.active { background: #d6336c; color: #fff; border-color: #d6336c; }
+
+    .card-wrap {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .card-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .card-box label {
+      font-size: 0.75rem;
+      opacity: 0.55;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    img {
+      width: 400px;
+      max-width: 100%;
+      border-radius: 12px;
+      display: block;
+    }
+  </style>
+</head>
+<body class="light">
+
+  <h1>maryhug · profile card preview</h1>
+
+  <div class="controls">
+    <button id="btn-light" class="active" onclick="setMode('light')">Light</button>
+    <button id="btn-dark"  onclick="setMode('dark')">Dark</button>
+    <button id="btn-side"  onclick="setSide()">Side by side</button>
+    <button onclick="reload()">Reload SVGs</button>
+  </div>
+
+  <div class="card-wrap" id="card-wrap">
+    <div class="card-box" id="box-light">
+      <label>Light</label>
+      <img id="img-light" src="maryhug-profile.svg" alt="Profile card – light" />
+    </div>
+    <div class="card-box" id="box-dark" style="display:none">
+      <label>Dark</label>
+      <img id="img-dark" src="maryhug-profile-dark.svg" alt="Profile card – dark" />
+    </div>
+  </div>
+
+  <script>
+    let mode = 'light';
+
+    function setMode(m) {
+      mode = m;
+      document.body.className = m;
+      document.getElementById('btn-light').classList.toggle('active', m === 'light');
+      document.getElementById('btn-dark').classList.toggle('active', m === 'dark');
+      document.getElementById('btn-side').classList.remove('active');
+      document.getElementById('box-light').style.display = m === 'light' ? '' : 'none';
+      document.getElementById('box-dark').style.display  = m === 'dark'  ? '' : 'none';
+    }
+
+    function setSide() {
+      mode = 'side';
+      document.body.className = 'light';
+      document.getElementById('btn-light').classList.remove('active');
+      document.getElementById('btn-dark').classList.remove('active');
+      document.getElementById('btn-side').classList.add('active');
+      document.getElementById('box-light').style.display = '';
+      document.getElementById('box-dark').style.display  = '';
+    }
+
+    function reload() {
+      const t = '?t=' + Date.now();
+      document.getElementById('img-light').src = 'maryhug-profile.svg' + t;
+      document.getElementById('img-dark').src  = 'maryhug-profile-dark.svg' + t;
+    }
+  </script>
+</body>
+</html>
