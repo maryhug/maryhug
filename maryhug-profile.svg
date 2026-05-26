@@ -245,8 +245,8 @@
 <circle cx="52" cy="432" r="20" fill="#1DB954"/>
 <text x="52" y="438" font-size="16" fill="white" text-anchor="middle" font-weight="700">♫</text>
 <text x="80" y="416" font-size="9" font-weight="700" fill="#1DB954" letter-spacing="1.5">NOW PLAYING</text>
-<text x="80" y="430" font-size="12" font-weight="600" fill="#4a1030">Heat Waves</text>
-<text x="80" y="444" font-size="10.5" fill="#9b5070">Glass Animals</text>
+<text x="80" y="430" font-size="12" font-weight="600" fill="#4a1030">La Plena - W Sound 05</text>
+<text x="80" y="444" font-size="10.5" fill="#9b5070">W Sound, Beéle, Ovy On The Drums</text>
 <rect x="80" y="450" width="286" height="4" rx="2" fill="#f0eaf4"/>
 <rect x="80" y="450" width="118" height="4" rx="2" fill="#1DB954"/>
 <text x="80" y="462" font-size="9" fill="#9b5070">1:32</text>
@@ -261,10 +261,10 @@
 <text x="44" y="436" font-size="11" fill="#9b5070" style="animation:fadein .6s ease both .62s">commits · last 7 days</text>
 
 <!-- STATS_BAR_START -->
-<rect x="52" y="450" width="30" height="60" rx="5" fill="#ea4899" style="animation:fadein .5s ease both .65s"/>
-<text x="67" y="444" font-size="9" font-weight="600" fill="#d6336c" text-anchor="middle">2</text>
-<rect x="99" y="480" width="30" height="30" rx="5" fill="#d6336c" style="animation:fadein .5s ease both .67s"/>
-<text x="114" y="474" font-size="9" font-weight="600" fill="#d6336c" text-anchor="middle">1</text>
+<rect x="52" y="486" width="30" height="24" rx="5" fill="#ea4899" style="animation:fadein .5s ease both .65s"/>
+<text x="67" y="480" font-size="9" font-weight="600" fill="#d6336c" text-anchor="middle">2</text>
+<rect x="99" y="450" width="30" height="60" rx="5" fill="#d6336c" style="animation:fadein .5s ease both .67s"/>
+<text x="114" y="444" font-size="9" font-weight="600" fill="#d6336c" text-anchor="middle">5</text>
 <rect x="145" y="504" width="30" height="6" rx="3" fill="#f9a8d4" style="animation:fadein .4s ease both .69s"/>
 <rect x="192" y="504" width="30" height="6" rx="3" fill="#ffd0e8" style="animation:fadein .4s ease both .71s"/>
 <rect x="238" y="504" width="30" height="6" rx="3" fill="#fce4ee" style="animation:fadein .4s ease both .73s"/>
@@ -306,7 +306,7 @@
     <rect x="10" y="0"   width="3.5" height="14"   rx="0.7" fill="#d6336c"/>
   </g>
   <text x="62"  y="592" font-size="11" fill="#4a1030">Contributions:</text>
-  <text x="158" y="592" font-size="11" fill="#d6336c" font-weight="700">404</text>
+  <text x="158" y="592" font-size="11" fill="#d6336c" font-weight="700">408</text>
 
   <g transform="translate(210,580)">
     <path d="M7,0.5 L13,4 L13,10.5 L7,14 L1,10.5 L1,4 Z M7,0.5 L7,7.5 M1,4 L7,7.5 L13,4"
