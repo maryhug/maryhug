@@ -117,12 +117,10 @@
   <linearGradient id="cssG" x1="0" y1="0" x2="1" y2="0">
     <stop offset="0%" stop-color="#3d9c9c"/><stop offset="100%" stop-color="#6dc0c0"/>
   </linearGradient>
-  <linearGradient id="distG" x1="0" y1="0" x2="1" y2="0">
-    <stop offset="0%"   stop-color="#d6336c"/>
-    <stop offset="40%"  stop-color="#f472aa"/>
-    <stop offset="75%"  stop-color="#ffb7d5"/>
-    <stop offset="100%" stop-color="#ffd6eb"/>
-  </linearGradient>
+  <!-- clipPath for uniform rounded corners on distribution bar -->
+  <clipPath id="distShape">
+    <rect x="434" y="547" width="300" height="13" rx="6"/>
+  </clipPath>
 </defs>
 
 <g clip-path="url(#root)">
@@ -389,31 +387,26 @@
 </g>
 <line x1="434" y1="528" x2="762" y2="528" stroke="#f9c8de" stroke-width="1"/>
 <text x="434" y="541" font-size="8.5" font-weight="600" fill="#9b5070" letter-spacing="1.5">DISTRIBUTION</text>
-<!-- Stacked bar: JS 138px · TS 108px · CSS 30px · HTML 15px · Others 9px = 300px -->
+<!-- Track -->
 <rect x="434" y="547" width="300" height="13" rx="6" fill="#f0eaf4"/>
-<rect x="434" y="547" width="0"   height="13" rx="6" fill="url(#jsG)">
-  <animate attributeName="width" from="0" to="138" dur="1s" begin="1.6s" fill="freeze"/>
-</rect>
-<rect x="572" y="547" width="0"   height="13" rx="0" fill="url(#tsG)">
-  <animate attributeName="width" from="0" to="108" dur="0.9s" begin="1.75s" fill="freeze"/>
-</rect>
-<rect x="680" y="547" width="0"   height="13" rx="0" fill="url(#cssG)">
-  <animate attributeName="width" from="0" to="30"  dur="0.5s" begin="1.9s"  fill="freeze"/>
-</rect>
-<rect x="710" y="547" width="0"   height="13" rx="0" fill="url(#htmlG)">
-  <animate attributeName="width" from="0" to="15"  dur="0.4s" begin="2s"    fill="freeze"/>
-</rect>
-<rect x="725" y="547" width="9"   height="13" rx="6" fill="#f472aa" opacity=".5"/>
-<!-- Legend with colored dots -->
-<circle cx="437" cy="571" r="4" fill="#b87420"/>
+<!-- Segments clipped to rounded shape — all corners uniform -->
+<g clip-path="url(#distShape)" style="animation:fadein .6s ease both 1.6s">
+  <rect x="434" y="547" width="138" height="13" fill="#E8855A"/><!-- JS  coral amber -->
+  <rect x="572" y="547" width="108" height="13" fill="#9478D8"/><!-- TS  soft violet -->
+  <rect x="680" y="547" width="30"  height="13" fill="#4BBFA8"/><!-- CSS mint       -->
+  <rect x="710" y="547" width="15"  height="13" fill="#E8688A"/><!-- HTML rose       -->
+  <rect x="725" y="547" width="9"   height="13" fill="#F4A8C8"/><!-- Others blush    -->
+</g>
+<!-- Legend -->
+<circle cx="437" cy="571" r="4" fill="#E8855A"/>
 <text x="445" y="575" font-size="8.5" fill="#9b5070">JS</text>
-<circle cx="464" cy="571" r="4" fill="#6d5dbb"/>
+<circle cx="464" cy="571" r="4" fill="#9478D8"/>
 <text x="472" y="575" font-size="8.5" fill="#9b5070">TS</text>
-<circle cx="490" cy="571" r="4" fill="#3d9c9c"/>
+<circle cx="490" cy="571" r="4" fill="#4BBFA8"/>
 <text x="498" y="575" font-size="8.5" fill="#9b5070">CSS</text>
-<circle cx="519" cy="571" r="4" fill="#c45c70"/>
+<circle cx="519" cy="571" r="4" fill="#E8688A"/>
 <text x="527" y="575" font-size="8.5" fill="#9b5070">HTML</text>
-<circle cx="555" cy="571" r="4" fill="#f472aa" opacity=".7"/>
+<circle cx="555" cy="571" r="4" fill="#F4A8C8"/>
 <text x="563" y="575" font-size="8.5" fill="#9b5070">Others</text>
 
 <!-- ROW 3: Let's Connect -->
