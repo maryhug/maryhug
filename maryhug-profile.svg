@@ -1,7 +1,7 @@
 <svg width="800" height="944" viewBox="0 0 800 944" xmlns="http://www.w3.org/2000/svg"><!-- cache:2026-05-26 -->
 <defs>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&amp;family=Syne:wght@700;800&amp;display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap');
     :root{
       --rose:#d6336c;--deep:#a8174a;--blush:#ffb7d5;--muted:#9b5070;--body:#4a1030;
     }
@@ -58,14 +58,12 @@
       /* Language bar fills — slightly brighter */
       rect[fill="url(#tsG)"]                 { opacity: .9; }
       rect[fill="url(#jsG)"]                 { opacity: .9; }
-      /* Spotify — keep green on dark */
-      circle[fill="#1DB954"]                 { fill: #1DB954; }
-      rect[fill="#1DB954"]                   { fill: #1DB954; }
+
       rect[fill="url(#htmlG)"]               { opacity: .9; }
       rect[fill="url(#cssG)"]                { opacity: .9; }
     }
-    text{font-family:'Outfit','Segoe UI',system-ui,sans-serif;}
-    .serif{font-family:'Syne','Outfit',sans-serif;font-weight:800;}
+    text{font-family:'Poppins','Segoe UI',system-ui,sans-serif;}
+    .serif{font-family:'Poppins','Segoe UI',sans-serif;font-weight:700;}
     @keyframes fadein{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
     @keyframes spark{0%,100%{opacity:.85;transform:scale(1) rotate(0deg)}50%{opacity:.25;transform:scale(1.5) rotate(20deg)}}
   </style>
@@ -118,6 +116,12 @@
   </linearGradient>
   <linearGradient id="cssG" x1="0" y1="0" x2="1" y2="0">
     <stop offset="0%" stop-color="#3d9c9c"/><stop offset="100%" stop-color="#6dc0c0"/>
+  </linearGradient>
+  <linearGradient id="distG" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%"   stop-color="#d6336c"/>
+    <stop offset="40%"  stop-color="#f472aa"/>
+    <stop offset="75%"  stop-color="#ffb7d5"/>
+    <stop offset="100%" stop-color="#ffd6eb"/>
   </linearGradient>
 </defs>
 
@@ -241,32 +245,32 @@
 
 <!-- Now Playing mini card (Spotify) -->
 <rect x="24" y="400" width="362" height="76" rx="16" fill="white" opacity=".95" filter="url(#cs)" style="animation:fadein .6s ease both .52s"/>
-<rect x="24" y="400" width="362" height="76" rx="16" fill="none" stroke="#1DB954" stroke-width="1.2" opacity=".35"/>
-<!-- Album art disc -->
-<circle cx="54" cy="438" r="24" fill="#1DB954" opacity=".15"/>
-<circle cx="54" cy="438" r="20" fill="#1DB954"/>
-<circle cx="54" cy="438" r="9" fill="#0a8c35"/>
-<circle cx="54" cy="438" r="3.5" fill="#1DB954"/>
+<rect x="24" y="400" width="362" height="76" rx="16" fill="none" stroke="#f9c8de" stroke-width="1.2"/>
+<!-- Album art disc (pink) -->
+<circle cx="54" cy="438" r="24" fill="#ffd6eb" opacity=".6"/>
+<circle cx="54" cy="438" r="20" fill="#d6336c"/>
+<circle cx="54" cy="438" r="9"  fill="#a8174a"/>
+<circle cx="54" cy="438" r="3.5" fill="#ffc0da"/>
 <!-- Animated equalizer bars (right side) -->
-<rect x="337" y="429" width="4" height="16" rx="2" fill="#1DB954" opacity=".9">
+<rect x="337" y="429" width="4" height="16" rx="2" fill="#f472aa" opacity=".9">
   <animate attributeName="height" values="16;5;12;3;16" dur="1s" repeatCount="indefinite"/>
   <animate attributeName="y" values="429;440;433;442;429" dur="1s" repeatCount="indefinite"/>
 </rect>
-<rect x="344" y="435" width="4" height="10" rx="2" fill="#1DB954" opacity=".9">
+<rect x="344" y="435" width="4" height="10" rx="2" fill="#d6336c" opacity=".9">
   <animate attributeName="height" values="10;16;4;14;10" dur="0.85s" repeatCount="indefinite"/>
   <animate attributeName="y" values="435;429;441;431;435" dur="0.85s" repeatCount="indefinite"/>
 </rect>
-<rect x="351" y="431" width="4" height="14" rx="2" fill="#1DB954" opacity=".9">
+<rect x="351" y="431" width="4" height="14" rx="2" fill="#f472aa" opacity=".9">
   <animate attributeName="height" values="14;6;16;5;14" dur="1.2s" repeatCount="indefinite"/>
   <animate attributeName="y" values="431;439;429;440;431" dur="1.2s" repeatCount="indefinite"/>
 </rect>
 <!-- Labels and track info -->
-<text x="82" y="417" font-size="8" font-weight="700" fill="#1DB954" letter-spacing="2">NOW PLAYING</text>
+<text x="82" y="417" font-size="8" font-weight="700" fill="#d6336c" letter-spacing="2">NOW PLAYING</text>
 <text x="80" y="430" font-size="12" font-weight="600" fill="#4a1030">Heat Waves</text>
 <text x="80" y="444" font-size="10.5" fill="#9b5070">Glass Animals</text>
-<!-- Progress bar — animated green fill -->
+<!-- Progress bar — animated pink fill -->
 <rect x="80" y="454" width="244" height="3" rx="1.5" fill="#f0eaf4"/>
-<rect x="80" y="454" width="0" height="3" rx="1.5" fill="#1DB954">
+<rect x="80" y="454" width="0" height="3" rx="1.5" fill="#f472aa">
   <animate attributeName="width" from="0" to="110" dur="2s" begin="0.4s" fill="freeze"/>
 </rect>
 
@@ -384,23 +388,13 @@
 
 </g>
 <line x1="434" y1="528" x2="762" y2="528" stroke="#f9c8de" stroke-width="1"/>
-<text x="434" y="540" font-size="8.5" font-weight="700" fill="#9b5070" letter-spacing="1.5">DISTRIBUTION</text>
-<!-- Stacked bar animated: JS 138px · TS 108px · CSS 30px · HTML 15px · Others 9px = 300px -->
-<rect x="434" y="545" width="300" height="12" rx="6" fill="#f0eaf4"/>
-<rect x="434" y="545" width="0"   height="12" rx="6" fill="url(#jsG)">
-  <animate attributeName="width" from="0" to="138" dur="1.2s" begin="1.6s" fill="freeze"/>
+<text x="434" y="541" font-size="8.5" font-weight="600" fill="#9b5070" letter-spacing="1.5">DISTRIBUTION</text>
+<!-- Single rose gradient bar -->
+<rect x="434" y="547" width="300" height="12" rx="6" fill="#f0eaf4"/>
+<rect x="434" y="547" width="0"   height="12" rx="6" fill="url(#distG)">
+  <animate attributeName="width" from="0" to="300" dur="1.4s" begin="1.6s" fill="freeze"/>
 </rect>
-<rect x="572" y="545" width="0"   height="12" rx="0" fill="url(#tsG)">
-  <animate attributeName="width" from="0" to="108" dur="1.2s" begin="1.8s" fill="freeze"/>
-</rect>
-<rect x="680" y="545" width="0"   height="12" rx="0" fill="url(#cssG)">
-  <animate attributeName="width" from="0" to="30" dur="0.8s" begin="2s" fill="freeze"/>
-</rect>
-<rect x="710" y="545" width="0"   height="12" rx="0" fill="url(#htmlG)">
-  <animate attributeName="width" from="0" to="15" dur="0.6s" begin="2.1s" fill="freeze"/>
-</rect>
-<rect x="725" y="545" width="9"   height="12" rx="6" fill="#f472aa" opacity=".45"/>
-<text x="434" y="570" font-size="9" fill="#9b5070">JS · TS · CSS · HTML · Others</text>
+<text x="434" y="571" font-size="9" fill="#9b5070">JS · TS · CSS · HTML · Others</text>
 
 <!-- ROW 3: Let's Connect -->
 <rect x="24" y="622" width="752" height="100" rx="16" fill="white" opacity=".9" filter="url(#cs)" style="animation:fadein .6s ease both .88s"/>
