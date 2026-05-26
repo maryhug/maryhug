@@ -36,8 +36,8 @@ SPOTIFY_RECENT_URL  = "https://api.spotify.com/v1/me/player/recently-played?limi
 # Bar chart layout (from SVG — do not change unless SVG layout changes)
 BAR_X      = [52,  99,  145, 192, 238, 285, 331]   # rect x for Mon→Sun
 BAR_CENTER = [67, 114,  160, 207, 253, 300, 346]   # text x-center for Mon→Sun
-PH_COLORS  = ["#ffd6eb","#ffb7d5","#f9a8d4","#ffd0e8","#fce4ee","#ffd0e8","#ffd6eb"]
-C_COLORS   = ["#ea4899","#d6336c","#f472aa","#e8599a","#f472aa","#d6336c","#ea4899"]
+PH_COLORS  = ["#D8D0F4","#C8BEF0","#D0C8F4","#CAC0F0","#D4CCF4","#C8BEF0","#D8D0F4"]
+C_COLORS   = ["#8B7ED8","#6B60C0","#9888E0","#7868C8","#9888E0","#6B60C0","#8B7ED8"]
 BASELINE   = 510   # y of the horizontal base line
 MAX_H      = 60    # max bar height in px (tallest bar = this)
 PH_Y, PH_H = 504, 6   # 0-commit placeholder: y and height
