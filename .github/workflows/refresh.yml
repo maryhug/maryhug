@@ -2,8 +2,8 @@ name: Refresh profile stats
 
 on:
   schedule:
-    # Every day at 6 am UTC (1 am Colombia time)
-    - cron: '0 6 * * *'
+    # Every 5 minutes — keeps Spotify near real-time (GitHub minimum interval)
+    - cron: '*/5 * * * *'
   workflow_dispatch: # lets you trigger it manually from GitHub
 
 jobs:

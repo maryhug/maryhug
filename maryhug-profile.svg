@@ -389,12 +389,32 @@
 </g>
 <line x1="434" y1="528" x2="762" y2="528" stroke="#f9c8de" stroke-width="1"/>
 <text x="434" y="541" font-size="8.5" font-weight="600" fill="#9b5070" letter-spacing="1.5">DISTRIBUTION</text>
-<!-- Single rose gradient bar -->
-<rect x="434" y="547" width="300" height="12" rx="6" fill="#f0eaf4"/>
-<rect x="434" y="547" width="0"   height="12" rx="6" fill="url(#distG)">
-  <animate attributeName="width" from="0" to="300" dur="1.4s" begin="1.6s" fill="freeze"/>
+<!-- Stacked bar: JS 138px · TS 108px · CSS 30px · HTML 15px · Others 9px = 300px -->
+<rect x="434" y="547" width="300" height="13" rx="6" fill="#f0eaf4"/>
+<rect x="434" y="547" width="0"   height="13" rx="6" fill="url(#jsG)">
+  <animate attributeName="width" from="0" to="138" dur="1s" begin="1.6s" fill="freeze"/>
 </rect>
-<text x="434" y="571" font-size="9" fill="#9b5070">JS · TS · CSS · HTML · Others</text>
+<rect x="572" y="547" width="0"   height="13" rx="0" fill="url(#tsG)">
+  <animate attributeName="width" from="0" to="108" dur="0.9s" begin="1.75s" fill="freeze"/>
+</rect>
+<rect x="680" y="547" width="0"   height="13" rx="0" fill="url(#cssG)">
+  <animate attributeName="width" from="0" to="30"  dur="0.5s" begin="1.9s"  fill="freeze"/>
+</rect>
+<rect x="710" y="547" width="0"   height="13" rx="0" fill="url(#htmlG)">
+  <animate attributeName="width" from="0" to="15"  dur="0.4s" begin="2s"    fill="freeze"/>
+</rect>
+<rect x="725" y="547" width="9"   height="13" rx="6" fill="#f472aa" opacity=".5"/>
+<!-- Legend with colored dots -->
+<circle cx="437" cy="571" r="4" fill="#b87420"/>
+<text x="445" y="575" font-size="8.5" fill="#9b5070">JS</text>
+<circle cx="464" cy="571" r="4" fill="#6d5dbb"/>
+<text x="472" y="575" font-size="8.5" fill="#9b5070">TS</text>
+<circle cx="490" cy="571" r="4" fill="#3d9c9c"/>
+<text x="498" y="575" font-size="8.5" fill="#9b5070">CSS</text>
+<circle cx="519" cy="571" r="4" fill="#c45c70"/>
+<text x="527" y="575" font-size="8.5" fill="#9b5070">HTML</text>
+<circle cx="555" cy="571" r="4" fill="#f472aa" opacity=".7"/>
+<text x="563" y="575" font-size="8.5" fill="#9b5070">Others</text>
 
 <!-- ROW 3: Let's Connect -->
 <rect x="24" y="622" width="752" height="100" rx="16" fill="white" opacity=".9" filter="url(#cs)" style="animation:fadein .6s ease both .88s"/>
