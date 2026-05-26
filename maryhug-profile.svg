@@ -1,7 +1,7 @@
 <svg width="800" height="944" viewBox="0 0 800 944" xmlns="http://www.w3.org/2000/svg"><!-- cache:2026-05-26 -->
 <defs>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=DM+Sans:wght@400;500;600&amp;display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&amp;family=Syne:wght@700;800&amp;display=swap');
     :root{
       --rose:#d6336c;--deep:#a8174a;--blush:#ffb7d5;--muted:#9b5070;--body:#4a1030;
     }
@@ -64,8 +64,8 @@
       rect[fill="url(#htmlG)"]               { opacity: .9; }
       rect[fill="url(#cssG)"]                { opacity: .9; }
     }
-    text{font-family:'DM Sans','Segoe UI',sans-serif;}
-    .serif{font-family:'DM Serif Display',Georgia,serif;}
+    text{font-family:'Outfit','Segoe UI',system-ui,sans-serif;}
+    .serif{font-family:'Syne','Outfit',sans-serif;font-weight:800;}
     @keyframes fadein{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
     @keyframes spark{0%,100%{opacity:.85;transform:scale(1) rotate(0deg)}50%{opacity:.25;transform:scale(1.5) rotate(20deg)}}
   </style>
@@ -240,17 +240,35 @@
 <text x="640" y="449" font-size="11" font-weight="600" fill="#d6336c" text-anchor="middle">REST APIs</text>
 
 <!-- Now Playing mini card (Spotify) -->
-<rect x="24" y="400" width="362" height="64" rx="16" fill="white" opacity=".9" filter="url(#cs)" style="animation:fadein .6s ease both .52s"/>
-<rect x="24" y="400" width="362" height="64" rx="16" fill="none" stroke="#f9c8de" stroke-width="1.2"/>
-<circle cx="52" cy="432" r="20" fill="#1DB954"/>
-<text x="52" y="438" font-size="16" fill="white" text-anchor="middle" font-weight="700">♫</text>
-<text x="80" y="416" font-size="9" font-weight="700" fill="#1DB954" letter-spacing="1.5">NOW PLAYING</text>
+<rect x="24" y="400" width="362" height="76" rx="16" fill="white" opacity=".95" filter="url(#cs)" style="animation:fadein .6s ease both .52s"/>
+<rect x="24" y="400" width="362" height="76" rx="16" fill="none" stroke="#1DB954" stroke-width="1.2" opacity=".35"/>
+<!-- Album art disc -->
+<circle cx="54" cy="438" r="24" fill="#1DB954" opacity=".15"/>
+<circle cx="54" cy="438" r="20" fill="#1DB954"/>
+<circle cx="54" cy="438" r="9" fill="#0a8c35"/>
+<circle cx="54" cy="438" r="3.5" fill="#1DB954"/>
+<!-- Animated equalizer bars (right side) -->
+<rect x="337" y="429" width="4" height="16" rx="2" fill="#1DB954" opacity=".9">
+  <animate attributeName="height" values="16;5;12;3;16" dur="1s" repeatCount="indefinite"/>
+  <animate attributeName="y" values="429;440;433;442;429" dur="1s" repeatCount="indefinite"/>
+</rect>
+<rect x="344" y="435" width="4" height="10" rx="2" fill="#1DB954" opacity=".9">
+  <animate attributeName="height" values="10;16;4;14;10" dur="0.85s" repeatCount="indefinite"/>
+  <animate attributeName="y" values="435;429;441;431;435" dur="0.85s" repeatCount="indefinite"/>
+</rect>
+<rect x="351" y="431" width="4" height="14" rx="2" fill="#1DB954" opacity=".9">
+  <animate attributeName="height" values="14;6;16;5;14" dur="1.2s" repeatCount="indefinite"/>
+  <animate attributeName="y" values="431;439;429;440;431" dur="1.2s" repeatCount="indefinite"/>
+</rect>
+<!-- Labels and track info -->
+<text x="82" y="417" font-size="8" font-weight="700" fill="#1DB954" letter-spacing="2">NOW PLAYING</text>
 <text x="80" y="430" font-size="12" font-weight="600" fill="#4a1030">Heat Waves</text>
 <text x="80" y="444" font-size="10.5" fill="#9b5070">Glass Animals</text>
-<rect x="80" y="450" width="286" height="4" rx="2" fill="#f0eaf4"/>
-<rect x="80" y="450" width="118" height="4" rx="2" fill="#1DB954"/>
-<text x="80" y="462" font-size="9" fill="#9b5070">1:32</text>
-<text x="358" y="462" font-size="9" fill="#9b5070" text-anchor="end">3:59</text>
+<!-- Progress bar — animated green fill -->
+<rect x="80" y="454" width="244" height="3" rx="1.5" fill="#f0eaf4"/>
+<rect x="80" y="454" width="0" height="3" rx="1.5" fill="#1DB954">
+  <animate attributeName="width" from="0" to="110" dur="2s" begin="0.4s" fill="freeze"/>
+</rect>
 
 <g transform="translate(0,94)">
 <!-- ROW 2: Actividad Semanal -->
@@ -324,45 +342,65 @@
 <line x1="434" y1="420" x2="634" y2="420" stroke="#f9c8de" stroke-width="1"/>
 <g style="animation:fadein .6s ease both .82s">
 
-  <!-- JS first (46% — most repos) -->
-  <circle cx="444" cy="443" r="5" fill="#b87420"/>
-  <text x="454" y="447" font-size="11" fill="#4a1030">JavaScript</text>
-  <rect x="534" y="436" width="195" height="14" rx="7" fill="#f0eaf4"/>
-  <rect x="534" y="436" width="90"  height="14" rx="7" fill="url(#jsG)"/>
-  <text x="737" y="447" font-size="10.5" fill="#9b5070" text-anchor="end">46%</text>
+  <!-- JS 46% -->
+  <rect x="434" y="428" width="352" height="22" rx="8" fill="#b87420" opacity=".05"/>
+  <circle cx="447" cy="439" r="6" fill="#b87420"/>
+  <text x="458" y="443" font-size="11.5" font-weight="600" fill="#4a1030">JavaScript</text>
+  <rect x="544" y="432" width="170" height="12" rx="6" fill="#f0eaf4"/>
+  <rect x="544" y="432" width="0"   height="12" rx="6" fill="url(#jsG)">
+    <animate attributeName="width" from="0" to="78" dur="1s" begin="0.8s" fill="freeze"/>
+  </rect>
+  <text x="724" y="443" font-size="11" font-weight="700" fill="#b87420" text-anchor="end">46%</text>
 
-  <!-- TS second (36%) -->
-  <circle cx="444" cy="465" r="5" fill="#6d5dbb"/>
-  <text x="454" y="469" font-size="11" fill="#4a1030">TypeScript</text>
-  <rect x="534" y="458" width="195" height="14" rx="7" fill="#f0eaf4"/>
-  <rect x="534" y="458" width="70"  height="14" rx="7" fill="url(#tsG)"/>
-  <text x="737" y="469" font-size="10.5" fill="#9b5070" text-anchor="end">36%</text>
+  <!-- TS 36% -->
+  <rect x="434" y="452" width="352" height="22" rx="8" fill="#6d5dbb" opacity=".05"/>
+  <circle cx="447" cy="463" r="6" fill="#6d5dbb"/>
+  <text x="458" y="467" font-size="11.5" font-weight="600" fill="#4a1030">TypeScript</text>
+  <rect x="544" y="456" width="170" height="12" rx="6" fill="#f0eaf4"/>
+  <rect x="544" y="456" width="0"   height="12" rx="6" fill="url(#tsG)">
+    <animate attributeName="width" from="0" to="61" dur="1s" begin="1s" fill="freeze"/>
+  </rect>
+  <text x="724" y="467" font-size="11" font-weight="700" fill="#6d5dbb" text-anchor="end">36%</text>
 
-  <!-- CSS (10%) -->
-  <circle cx="444" cy="487" r="5" fill="#3d9c9c"/>
-  <text x="454" y="491" font-size="11" fill="#4a1030">CSS</text>
-  <rect x="534" y="480" width="195" height="14" rx="7" fill="#f0eaf4"/>
-  <rect x="534" y="480" width="20"  height="14" rx="7" fill="url(#cssG)"/>
-  <text x="737" y="491" font-size="10.5" fill="#9b5070" text-anchor="end">10%</text>
+  <!-- CSS 10% -->
+  <rect x="434" y="476" width="352" height="22" rx="8" fill="#3d9c9c" opacity=".05"/>
+  <circle cx="447" cy="487" r="6" fill="#3d9c9c"/>
+  <text x="458" y="491" font-size="11.5" font-weight="600" fill="#4a1030">CSS</text>
+  <rect x="544" y="480" width="170" height="12" rx="6" fill="#f0eaf4"/>
+  <rect x="544" y="480" width="0"   height="12" rx="6" fill="url(#cssG)">
+    <animate attributeName="width" from="0" to="17" dur="1s" begin="1.2s" fill="freeze"/>
+  </rect>
+  <text x="724" y="491" font-size="11" font-weight="700" fill="#3d9c9c" text-anchor="end">10%</text>
 
-  <!-- HTML (5%) -->
-  <circle cx="444" cy="509" r="5" fill="#c45c70"/>
-  <text x="454" y="513" font-size="11" fill="#4a1030">HTML</text>
-  <rect x="534" y="502" width="195" height="14" rx="7" fill="#f0eaf4"/>
-  <rect x="534" y="502" width="10"  height="14" rx="7" fill="url(#htmlG)"/>
-  <text x="737" y="513" font-size="10.5" fill="#9b5070" text-anchor="end">5%</text>
+  <!-- HTML 5% -->
+  <rect x="434" y="500" width="352" height="22" rx="8" fill="#c45c70" opacity=".05"/>
+  <circle cx="447" cy="511" r="6" fill="#c45c70"/>
+  <text x="458" y="515" font-size="11.5" font-weight="600" fill="#4a1030">HTML</text>
+  <rect x="544" y="504" width="170" height="12" rx="6" fill="#f0eaf4"/>
+  <rect x="544" y="504" width="0"   height="12" rx="6" fill="url(#htmlG)">
+    <animate attributeName="width" from="0" to="8" dur="1s" begin="1.4s" fill="freeze"/>
+  </rect>
+  <text x="724" y="515" font-size="11" font-weight="700" fill="#c45c70" text-anchor="end">5%</text>
 
 </g>
-<line x1="434" y1="530" x2="762" y2="530" stroke="#f9c8de" stroke-width="1"/>
-<text x="434" y="542" font-size="9" font-weight="700" fill="#9b5070" letter-spacing="1">DISTRIBUTION</text>
-<!-- Stacked bar: JS 138px · TS 108px · CSS 30px · HTML 15px · Others 9px = 300px -->
-<rect x="434" y="547" width="300" height="14" rx="7" fill="#f0eaf4"/>
-<rect x="434" y="547" width="138" height="14" rx="7" fill="url(#jsG)"/>
-<rect x="572" y="547" width="108" height="14" rx="0" fill="url(#tsG)"/>
-<rect x="680" y="547" width="30"  height="14" rx="0" fill="url(#cssG)"/>
-<rect x="710" y="547" width="15"  height="14" rx="0" fill="url(#htmlG)"/>
-<rect x="725" y="547" width="9"   height="14" rx="7" fill="#f472aa" opacity=".45"/>
-<text x="434" y="571" font-size="9" fill="#9b5070">JS · TS · CSS · HTML · Others</text>
+<line x1="434" y1="528" x2="762" y2="528" stroke="#f9c8de" stroke-width="1"/>
+<text x="434" y="540" font-size="8.5" font-weight="700" fill="#9b5070" letter-spacing="1.5">DISTRIBUTION</text>
+<!-- Stacked bar animated: JS 138px · TS 108px · CSS 30px · HTML 15px · Others 9px = 300px -->
+<rect x="434" y="545" width="300" height="12" rx="6" fill="#f0eaf4"/>
+<rect x="434" y="545" width="0"   height="12" rx="6" fill="url(#jsG)">
+  <animate attributeName="width" from="0" to="138" dur="1.2s" begin="1.6s" fill="freeze"/>
+</rect>
+<rect x="572" y="545" width="0"   height="12" rx="0" fill="url(#tsG)">
+  <animate attributeName="width" from="0" to="108" dur="1.2s" begin="1.8s" fill="freeze"/>
+</rect>
+<rect x="680" y="545" width="0"   height="12" rx="0" fill="url(#cssG)">
+  <animate attributeName="width" from="0" to="30" dur="0.8s" begin="2s" fill="freeze"/>
+</rect>
+<rect x="710" y="545" width="0"   height="12" rx="0" fill="url(#htmlG)">
+  <animate attributeName="width" from="0" to="15" dur="0.6s" begin="2.1s" fill="freeze"/>
+</rect>
+<rect x="725" y="545" width="9"   height="12" rx="6" fill="#f472aa" opacity=".45"/>
+<text x="434" y="570" font-size="9" fill="#9b5070">JS · TS · CSS · HTML · Others</text>
 
 <!-- ROW 3: Let's Connect -->
 <rect x="24" y="622" width="752" height="100" rx="16" fill="white" opacity=".9" filter="url(#cs)" style="animation:fadein .6s ease both .88s"/>
