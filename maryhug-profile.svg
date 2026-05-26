@@ -264,8 +264,8 @@
 </rect>
 <!-- Labels and track info -->
 <text x="82" y="417" font-size="8" font-weight="700" fill="#d6336c" letter-spacing="2">NOW PLAYING</text>
-<text x="80" y="430" font-size="12" font-weight="600" fill="#4a1030">Mi Perra Es</text>
-<text x="80" y="444" font-size="10.5" fill="#9b5070">LEANDRO, KEICY, Leandro Santos,…</text>
+<text x="80" y="430" font-size="12" font-weight="600" fill="#4a1030">Me Niegas</text>
+<text x="80" y="444" font-size="10.5" fill="#9b5070">Baby Rasta y Gringo</text>
 <!-- Progress bar — animated pink fill -->
 <rect x="80" y="454" width="244" height="3" rx="1.5" fill="#f0eaf4"/>
 <rect x="80" y="454" width="0" height="3" rx="1.5" fill="#f472aa">
