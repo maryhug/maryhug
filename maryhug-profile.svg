@@ -353,8 +353,8 @@
 </rect>
 <!-- Labels and track info -->
 <text x="82" y="417" font-size="8" font-weight="700" fill="#7C6FC8" letter-spacing="2">NOW PLAYING</text>
-<text x="80" y="430" font-size="12" font-weight="600" fill="#2C2840">Me Niegas</text>
-<text x="80" y="444" font-size="10.5" fill="#8080A0">Baby Rasta y Gringo</text>
+<text x="80" y="430" font-size="12" font-weight="600" fill="#2C2840">Ras Tas Tas Full Hd</text>
+<text x="80" y="444" font-size="10.5" fill="#8080A0">Cali Flow Latino</text>
 <!-- Progress bar — animated pink fill -->
 <rect x="80" y="454" width="244" height="3" rx="1.5" fill="#E4DEFC"/>
 <rect x="80" y="454" width="0" height="3" rx="1.5" fill="#A090DC">
@@ -370,16 +370,16 @@
 <text x="44" y="436" font-size="11" fill="#8080A0" style="animation:fadein .6s ease both .62s">commits · last 7 days</text>
 
 <!-- STATS_BAR_START -->
-<rect x="52" y="486" width="30" height="24" rx="5" fill="#8B7ED8" style="animation:fadein .5s ease both .65s"/>
-<text x="67" y="480" font-size="9" font-weight="600" fill="#7C6FC8" text-anchor="middle">2</text>
-<rect x="99" y="450" width="30" height="60" rx="5" fill="#7C6FC8" style="animation:fadein .5s ease both .67s"/>
-<text x="114" y="444" font-size="9" font-weight="600" fill="#7C6FC8" text-anchor="middle">5</text>
-<rect x="145" y="504" width="30" height="6" rx="3" fill="#C8BEF0" style="animation:fadein .4s ease both .69s"/>
-<rect x="192" y="504" width="30" height="6" rx="3" fill="#D0C8F4" style="animation:fadein .4s ease both .71s"/>
-<rect x="238" y="504" width="30" height="6" rx="3" fill="#E4DEFA" style="animation:fadein .4s ease both .73s"/>
-<rect x="285" y="504" width="30" height="6" rx="3" fill="#D0C8F4" style="animation:fadein .4s ease both .75s"/>
+<rect x="52" y="501" width="30" height="9" rx="5" fill="#8B7ED8" style="animation:fadein .5s ease both .65s"/>
+<text x="67" y="495" font-size="9" font-weight="600" fill="#d6336c" text-anchor="middle">2</text>
+<rect x="99" y="450" width="30" height="60" rx="5" fill="#6B60C0" style="animation:fadein .5s ease both .67s"/>
+<text x="114" y="444" font-size="9" font-weight="600" fill="#d6336c" text-anchor="middle">14</text>
+<rect x="145" y="504" width="30" height="6" rx="3" fill="#D0C8F4" style="animation:fadein .4s ease both .69s"/>
+<rect x="192" y="504" width="30" height="6" rx="3" fill="#CAC0F0" style="animation:fadein .4s ease both .71s"/>
+<rect x="238" y="504" width="30" height="6" rx="3" fill="#D4CCF4" style="animation:fadein .4s ease both .73s"/>
+<rect x="285" y="504" width="30" height="6" rx="3" fill="#C8BEF0" style="animation:fadein .4s ease both .75s"/>
 <rect x="331" y="504" width="30" height="6" rx="3" fill="#D8D0F4" style="animation:fadein .4s ease both .77s"/>
-<line x1="44" y1="510" x2="374" y2="510" stroke="#C8C0EC" stroke-width="1.5"/>
+<line x1="44" y1="510" x2="374" y2="510" stroke="#f9c8de" stroke-width="1.5"/>
 <!-- STATS_BAR_END -->
 <!-- Day labels -->
 <text x="67"  y="526" font-size="10" fill="#8080A0" text-anchor="middle">Mon</text>
@@ -415,7 +415,7 @@
     <rect x="10" y="0"   width="3.5" height="14"   rx="0.7" fill="#7C6FC8"/>
   </g>
   <text x="62"  y="592" font-size="11" fill="#2C2840">Contributions:</text>
-  <text x="158" y="592" font-size="11" fill="#7C6FC8" font-weight="700">408</text>
+  <text x="158" y="592" font-size="11" fill="#7C6FC8" font-weight="700">417</text>
 
   <g transform="translate(210,580)">
     <path d="M7,0.5 L13,4 L13,10.5 L7,14 L1,10.5 L1,4 Z M7,0.5 L7,7.5 M1,4 L7,7.5 L13,4"
