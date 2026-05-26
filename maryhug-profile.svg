@@ -1,7 +1,7 @@
 <svg width="800" height="944" viewBox="0 0 800 944" xmlns="http://www.w3.org/2000/svg"><!-- cache:2026-05-26 -->
 <defs>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&amp;display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&amp;display=swap');
     :root{
       --rose:#7C6FC8;--deep:#5A4A9A;--blush:#C4B8F0;--muted:#8080A0;--body:#2C2840;
     }
@@ -55,8 +55,8 @@
       circle[fill="#E898B0"]                 { fill: #F090AA; }
       circle[fill="#78C8B4"]                 { fill: #70D4C0; }
     }
-    text{font-family:'Nunito','Segoe UI',system-ui,sans-serif;}
-    .serif{font-family:'Nunito','Segoe UI',sans-serif;font-weight:800;}
+    text{font-family:'Raleway','Segoe UI',system-ui,sans-serif;}
+    .serif{font-family:'Raleway','Segoe UI',sans-serif;font-weight:800;}
     @keyframes fadein{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
     @keyframes spark{0%,100%{opacity:.85;transform:scale(1) rotate(0deg)}50%{opacity:.25;transform:scale(1.5) rotate(20deg)}}
   </style>
@@ -434,44 +434,44 @@
 <g style="animation:fadein .6s ease both .82s">
 
   <!-- JS 46% -->
-  <rect x="434" y="428" width="338" height="22" rx="8" fill="#E8A87C" opacity=".07"/>
+  <rect x="434" y="428" width="340" height="22" rx="8" fill="#E8A87C" opacity=".07"/>
   <circle cx="447" cy="439" r="6" fill="#E8A87C"/>
   <text x="458" y="443" font-size="11.5" font-weight="600" fill="#2C2840">JavaScript</text>
-  <rect x="544" y="432" width="170" height="12" rx="6" fill="#E4DEFC"/>
+  <rect x="544" y="432" width="172" height="12" rx="6" fill="#E4DEFC"/>
   <rect x="544" y="432" width="0"   height="12" rx="6" fill="#E8A87C">
-    <animate attributeName="width" from="0" to="78" dur="1s" begin="0.8s" fill="freeze"/>
+    <animate attributeName="width" from="0" to="79" dur="1s" begin="0.8s" fill="freeze"/>
   </rect>
-  <text x="724" y="443" font-size="11" font-weight="700" fill="#E8A87C" text-anchor="end">46%</text>
+  <text x="762" y="443" font-size="11" font-weight="700" fill="#E8A87C" text-anchor="end">46%</text>
 
   <!-- TS 36% -->
-  <rect x="434" y="452" width="338" height="22" rx="8" fill="#A898DC" opacity=".07"/>
+  <rect x="434" y="452" width="340" height="22" rx="8" fill="#A898DC" opacity=".07"/>
   <circle cx="447" cy="463" r="6" fill="#A898DC"/>
   <text x="458" y="467" font-size="11.5" font-weight="600" fill="#2C2840">TypeScript</text>
-  <rect x="544" y="456" width="170" height="12" rx="6" fill="#E4DEFC"/>
+  <rect x="544" y="456" width="172" height="12" rx="6" fill="#E4DEFC"/>
   <rect x="544" y="456" width="0"   height="12" rx="6" fill="#A898DC">
-    <animate attributeName="width" from="0" to="61" dur="1s" begin="1s" fill="freeze"/>
+    <animate attributeName="width" from="0" to="62" dur="1s" begin="1s" fill="freeze"/>
   </rect>
-  <text x="724" y="467" font-size="11" font-weight="700" fill="#A898DC" text-anchor="end">36%</text>
+  <text x="762" y="467" font-size="11" font-weight="700" fill="#A898DC" text-anchor="end">36%</text>
 
   <!-- CSS 10% -->
-  <rect x="434" y="476" width="338" height="22" rx="8" fill="#78C8B4" opacity=".07"/>
+  <rect x="434" y="476" width="340" height="22" rx="8" fill="#78C8B4" opacity=".07"/>
   <circle cx="447" cy="487" r="6" fill="#78C8B4"/>
   <text x="458" y="491" font-size="11.5" font-weight="600" fill="#2C2840">CSS</text>
-  <rect x="544" y="480" width="170" height="12" rx="6" fill="#E4DEFC"/>
+  <rect x="544" y="480" width="172" height="12" rx="6" fill="#E4DEFC"/>
   <rect x="544" y="480" width="0"   height="12" rx="6" fill="#78C8B4">
     <animate attributeName="width" from="0" to="17" dur="1s" begin="1.2s" fill="freeze"/>
   </rect>
-  <text x="724" y="491" font-size="11" font-weight="700" fill="#78C8B4" text-anchor="end">10%</text>
+  <text x="762" y="491" font-size="11" font-weight="700" fill="#78C8B4" text-anchor="end">10%</text>
 
   <!-- HTML 5% -->
-  <rect x="434" y="500" width="338" height="22" rx="8" fill="#E898B0" opacity=".07"/>
+  <rect x="434" y="500" width="340" height="22" rx="8" fill="#E898B0" opacity=".07"/>
   <circle cx="447" cy="511" r="6" fill="#E898B0"/>
   <text x="458" y="515" font-size="11.5" font-weight="600" fill="#2C2840">HTML</text>
-  <rect x="544" y="504" width="170" height="12" rx="6" fill="#E4DEFC"/>
+  <rect x="544" y="504" width="172" height="12" rx="6" fill="#E4DEFC"/>
   <rect x="544" y="504" width="0"   height="12" rx="6" fill="#E898B0">
     <animate attributeName="width" from="0" to="8" dur="1s" begin="1.4s" fill="freeze"/>
   </rect>
-  <text x="724" y="515" font-size="11" font-weight="700" fill="#E898B0" text-anchor="end">5%</text>
+  <text x="762" y="515" font-size="11" font-weight="700" fill="#E898B0" text-anchor="end">5%</text>
 
 </g>
 <line x1="434" y1="528" x2="762" y2="528" stroke="#C8C0EC" stroke-width="1"/>
